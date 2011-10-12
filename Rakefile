@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "kete_gets_trollied"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Uses the trollied gem for adding item ordering to Kete.}
+    gem.description = %Q{Uses the trollied gem for adding item ordering to Kete.}
     gem.email = "walter@katipo.co.nz"
-    gem.homepage = "http://github.com/walter/kete_gets_trollied"
+    gem.homepage = "http://github.com/kete/kete_gets_trollied"
     gem.authors = ["Walter McGinnis"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "trollied", ">= 0.1.4"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -20,9 +21,7 @@ end
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+  # in the future may include own tests under dummy app or generators for kete app specific tests.
 end
 
 begin
