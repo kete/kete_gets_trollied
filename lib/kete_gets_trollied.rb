@@ -1,0 +1,4 @@
+require 'kete_gets_trollied/has_trolley_controller_helpers_overrides'
+require 'kete_gets_trollied/orders_helper_overrides'
+require 'kete_gets_trollied/line_items_helper_overrides'
+require 'kete_gets_trollied/user_order_notifications'
