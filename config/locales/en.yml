@@ -1,0 +1,75 @@
+---
+en:
+  line_items:
+    new:
+      confirm_order: "Confirm Enquiry"
+    controllers:
+      created: "Added to enquiry"
+      updated: "Updated in enquiry"
+      deleted: "Deleted from enquiry"
+  orders:
+    checkout_form:
+      confirm_order: "Confirm enquiry details"
+      additional_info_for_order: "What is the subject or nature of your enquiry?"
+    helpers:
+      cancelled_orders: "Cancelled Enquiries"
+      completed_orders: "Completed Enquiries"
+      current_orders: "Current Enquiries"
+      in_process_orders: "Enquiries Under Action"
+      order_number: "Enquiry:"
+      ready_orders: "Ready Enquiries"
+      user_review_orders: "Enquiries needing user attention"
+      contact_name: "Contact Name"
+      contact_name_example: "Fill out the name of the person to speak to about the enquiry if it is different from this account's username."
+      contact_phone: "Contact Phone"
+      contact_phone_example: "A staff member may be in contact to discuss your enquiry."
+      required_by: "Date enquiry is required by"
+    index:
+      in_process: "under action"
+      new: "New Enquiry"
+      no_orders: "No enquiries match your criteria."
+      title: "Enquiries"
+      user_review: "needing user attention"
+    order:
+      order_controls_preface: "Enquiry actions:"
+      order_notes: "Notes for this enquiry:"
+    show:
+      your_order: "Your Enquiry"
+      for_user_title: "Enquiry for {{name}}"
+    controllers:
+      change_to_cancel: "Enquiry Cancelled"
+      change_to_checkout: "Enquiry Checked Out"
+      change_to_finish: "Enquiry Completed"
+      change_to_fulfilled_without_acceptance: "Enquiry Ready"
+      change_to_alteration_approve: "You approved the changes to the enquiry. It is now back in process."
+      created: "Created enquiry"
+      updated: "Updated enquiry"
+      deleted: "Deleted enquiry"
+      checkout: "Your enquiry has been made."
+  trolleys:
+    orders:
+      cancelled: "Cancelled Enquiries"
+      completed: "Completed Enquiries"
+      current: "Current Enquiries"
+      in_process: "Under Action"
+      none_pending: "No enquiries pending."
+      ready: "Ready Enquiries"
+      user_review: "Enquiries needing your attention"
+  user_notifier:
+    cancelled:
+      user_has_cancelled: "{{cancelling_user}} has cancelled the following order:"
+    in_process:
+      user_has_checked_out: "{{order_user}} has checked out the following order:"
+    new_note:
+      user_has_created_note: "{{note_user}} has created a new note on the following order:"
+    ready:
+      your_order_is_ready: "Your order is ready:"
+    user_review:
+      please_review_order: "Your enquiry has been altered, please review:"
+  user_notifier_model:
+    subject_cancelled: "An order has been cancelled."
+    subject_in_process: "An order has been checked out."
+    subject_new_note: "A new note to an order has been added."
+    subject_ready: "Your order is now available."
+    subject_user_review: "An order needs your review."
+

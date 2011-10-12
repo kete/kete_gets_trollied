@@ -1,0 +1,7 @@
+<%= @user.user_name %>,
+
+<%= t '.user_has_created_note', :note_user => @note.user.resolved_name -%>
+
+<%= @url %>
+
+<%= render 'email_footer' %>

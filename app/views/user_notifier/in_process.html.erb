@@ -1,0 +1,7 @@
+<%= @user.user_name %>,
+
+<%= t '.user_has_checked_out', :order_user => @order.user.resolved_name -%>
+
+<%= @url %>
+
+<%= render 'email_footer' %>

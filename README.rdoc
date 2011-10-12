@@ -1,17 +1,55 @@
 = kete_gets_trollied
 
-Description goes here.
+A Kete add-on that uses the Trollied gem to deliver ordering of items from Kete.
+
+== Usage
+
+Currently only tested against Rails 2.3.5.  When Kete moves to Rails 3, this gem will be updated to.
+
+Install the Trollied gem and this gem:
+
+  gem install trollied kete_gets_trollied
+
+After installing the gem do the following to add kete_gets_trollied to your app:
+
+In the Rails::Initializer.run config block  config/environment.rb:
+
+  config.gem "trollied"
+  config.gem "kete_gets_trollied"
+
+Now you need to run the migration generator to add the tables and columns that kete_gets_trollied needs to work. Do this in your Kete application's root directory.
+
+  $ script/generate trollied_migrations
+
+Alter this:
+
+t.integer :purchasable_item_id, :null => false
+
+to
+
+t.integer :purchasable_item_id, :null => false, :references => nil
+
+Then run the migration command:
+
+  $ rake db:migrate # add environment if necessary, i.e. rake db:migrate RAILS_ENV=production
+
+Lastly you will want restart your Kete server and backgroundrb:
+
+$ touch tmp/restart.txt
+$ script/backgroundrb stop
+...
+$ script/backgroundrb start
 
 == Note on Patches/Pull Requests
  
 * Fork the project.
-* Make your feature addition or bug fix.
+* Make your feature addition or bug fix in a corresponding branch (even better, make an ticket first and name the branch with the ticket number in it)
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* Send me a pull request.
 
 == Copyright
 
-Copyright (c) 2011 Walter McGinnis. See LICENSE for details.
+Copyright (c) 2011 Horowhenua Library Trust. See LICENSE for details.
