@@ -1,6 +1,4 @@
 ApplicationController.class_eval do
-  include HasTrolleyControllerHelpersOverrides
-
   def user_is_trolley_owner_or_appropriate_admin?
     return false unless logged_in?
 

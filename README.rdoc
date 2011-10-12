@@ -17,6 +17,14 @@ In the Rails::Initializer.run config block  config/environment.rb:
   config.gem "trollied"
   config.gem "kete_gets_trollied"
 
+You also need to add config/initializers/kete_gets_trollied.rb with the following:
+
+  ActionController::Base.send(:include, HasTrolleyControllerHelpersOverrides)
+  ActionController::Base.send(:helper, OrdersHelperOverrides)
+  ActionController::Base.send(:helper, LineItemsHelperOverrides)
+
+This makes kete_gets_trollied's overrides take precedence over the straight trollied gem's stuff.
+
 Now you need to run the migration generator to add the tables and columns that kete_gets_trollied needs to work. Do this in your Kete application's root directory.
 
   $ script/generate trollied_migrations

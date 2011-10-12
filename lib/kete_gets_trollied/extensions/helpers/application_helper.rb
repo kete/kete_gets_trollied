@@ -1,7 +1,4 @@
 ApplicationHelper.module_eval do
-  include OrdersHelperOverrides
-  include LineItemsHelperOverrides
-
   # in application layout
   # override in your add-on to add to it
   def add_ons_logged_in_user_list
