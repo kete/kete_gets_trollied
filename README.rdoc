@@ -35,10 +35,10 @@ Then run the migration command:
 
 Lastly you will want restart your Kete server and backgroundrb:
 
-$ touch tmp/restart.txt
-$ script/backgroundrb stop
-...
-$ script/backgroundrb start
+  $ touch tmp/restart.txt
+  $ script/backgroundrb stop
+  ...
+  $ script/backgroundrb start
 
 == Note on Patches/Pull Requests
  
