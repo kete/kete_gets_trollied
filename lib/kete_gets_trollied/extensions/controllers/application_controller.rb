@@ -22,3 +22,6 @@ ApplicationController.class_eval do
     redirect_to DEFAULT_REDIRECTION_HASH
   end
 end
+
+ApplicationController.add_ons_full_width_content_wrapper_controllers += %w(trollies orders)
+ApplicationController.add_ons_content_wrapper_end_controllers += %w(trollies orders)
