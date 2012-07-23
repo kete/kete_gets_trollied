@@ -52,6 +52,10 @@ module OrdersHelperOverrides
         :action => 'index' }
     end
 
+    # override this if you want to tie-in to meta_data_for's headline
+    def meta_data_headline_extentions_for(order)
+    end
+
     def meta_data_for(order)
       html = '<div id="order-meta-data">'
       html += '<h3 id="order-id">' + t('orders.helpers.order_number') + " #{order.id}"
@@ -62,7 +66,12 @@ module OrdersHelperOverrides
       else
         html += link_basket_orders(order.basket)
       end
-      html += ')</h3>'
+      html += ')'
+
+      html += meta_data_headline_extentions_for(order)
+
+      html += '</h3>'
+
       if !order.current? && !(order.contact_name.blank? && order.contact_phone.blank?)
         html += '<h4 id="order-info">'
         html += order.contact_name + ' - ' if order.contact_name
