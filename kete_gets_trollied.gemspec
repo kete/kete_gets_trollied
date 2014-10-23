@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kete_gets_trollied/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "kete_gets_trollied"
-  spec.version       = KeteGetsTrollied::VERSION
+  spec.version       = File.exist?('VERSION') ? File.read('VERSION') : ""
   spec.authors       = ["Walter McGinnis"]
   spec.email         = ["wm@waltermcginnis.com"]
   spec.summary = %Q{Uses the trollied gem for adding item ordering to Kete.}
